@@ -1,8 +1,10 @@
 # songlj233.github.io
 
-##  Working for Android
-##   *Like ~~Artificial Intelligence~~*
+## State
 
+Working for Android
 
-## **Learning**
+*Like ~~Artificial Intelligence~~*
+
+**Keep learning**
 
