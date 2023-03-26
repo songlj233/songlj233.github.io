@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>hexo使用教程</title>
+    <link href="/21521/"/>
+    <url>/21521/</url>
+    
+    <content type="html"><![CDATA[<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><p><code>hexo new a</code></p><h2 id="新建草稿"><a href="#新建草稿" class="headerlink" title="新建草稿"></a>新建草稿</h2><p><code>hexo new draft b</code></p><h2 id="发布草稿"><a href="#发布草稿" class="headerlink" title="发布草稿"></a>发布草稿</h2><p><code>hexo publish a</code></p><h2 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h2><p>hexo server</p><h2 id="新建文章-1"><a href="#新建文章-1" class="headerlink" title="新建文章"></a>新建文章</h2><p>hexo new a</p><h2 id="新建草稿-1"><a href="#新建草稿-1" class="headerlink" title="新建草稿"></a>新建草稿</h2><p>hexo new draft b</p><h2 id="发布草稿成为文章"><a href="#发布草稿成为文章" class="headerlink" title="发布草稿成为文章"></a>发布草稿成为文章</h2><p>hexo publish b</p><h2 id="发布关于"><a href="#发布关于" class="headerlink" title="发布关于"></a>发布关于</h2><p>hexo new page c</p><h2 id="生成静态文章"><a href="#生成静态文章" class="headerlink" title="生成静态文章"></a>生成静态文章</h2><p>hexo generate 或者是 hexo g</p><h2 id="部署文章"><a href="#部署文章" class="headerlink" title="部署文章"></a>部署文章</h2><p>hexo deploy 或者是 hexo d</p><h2 id="一键部署"><a href="#一键部署" class="headerlink" title="一键部署"></a>一键部署</h2><p>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</p><h1 id="备忘"><a href="#备忘" class="headerlink" title="备忘"></a>备忘</h1><h2 id="next主题错误的解决方案"><a href="#next主题错误的解决方案" class="headerlink" title="next主题错误的解决方案"></a>next主题错误的解决方案</h2><p>npm i hexo-renderer-swig</p><h2 id="主题网站"><a href="#主题网站" class="headerlink" title="主题网站"></a>主题网站</h2><p><a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p><h3 id="maple"><a href="#maple" class="headerlink" title="maple"></a>maple</h3><p><a href="https://github.com/xbmlz/hexo-theme-maple">https://github.com/xbmlz/hexo-theme-maple</a></p><h3 id="fluid"><a href="#fluid" class="headerlink" title="fluid"></a>fluid</h3><p><a href="https://gitcode.net/mirrors/fluid-dev/hexo-theme-fluid">https://gitcode.net/mirrors/fluid-dev/hexo-theme-fluid</a></p><h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p><a href="https://blog.csdn.net/qq_58608526/article/details/124652412">https://blog.csdn.net/qq_58608526/article/details/124652412</a></p><h2 id="问题整理"><a href="#问题整理" class="headerlink" title="问题整理"></a>问题整理</h2><h3 id="git部署"><a href="#git部署" class="headerlink" title="git部署"></a>git部署</h3><p>使用git部署，需要安装git工具，命令为<code>npm install hexo-deployer-git --save</code>。</p><p>注：部署<code>hexo d</code>部署成功，意味这会将<code>hexo g</code>生成的文件，上传到github服务器上。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>搭建个人网站</title>
+    <link href="/56357/"/>
+    <url>/56357/</url>
+    
+    <content type="html"><![CDATA[<ul><li><a href="/28862">搭建个人网址(1)——连接服务器</a></li><li><a href="/43379">搭建个人网址(2)——服务器环境搭建</a></li><li><a href="/23491">搭建个人网址(3)——ChatGPT服务搭建</a></li><li><a href="/44322">搭建个人网址(4)——MySql数据库服务</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>服务器搭建</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>搭建个人网址(4)——MySql数据库服务</title>
+    <link href="/44322/"/>
+    <url>/44322/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇文章介绍的是如何在一个项目中，将项目的数据存储到服务器中。</p><h2 id="前提准备"><a href="#前提准备" class="headerlink" title="前提准备"></a>前提准备</h2><ul><li>一台服务器，且能正常部署项目</li></ul><h2 id="安装MySql"><a href="#安装MySql" class="headerlink" title="安装MySql"></a>安装MySql</h2><ol><li><p>下载MySQL的安装包</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">wget http:<span class="hljs-regexp">//</span>repo.mysql.com/mysql57-community-release-el7-<span class="hljs-number">10</span>.noarch.rpm<br></code></pre></td></tr></table></figure></li><li><p>安装MySQL源</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">rpm</span> -Uvh mysql57-community-release-el7-<span class="hljs-number">10</span>.noarch.rpm<br></code></pre></td></tr></table></figure></li><li><p>安装MySQL服务端，需要等待一些时间</p><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta">yum install -y mysql-community-<span class="hljs-keyword">server</span><br></code></pre></td></tr></table></figure><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs arduino">注：如果提示仓库 <span class="hljs-string">&quot;MySQL 5.7 Community Server&quot;</span> 的 GPG 公钥已安装，但是不适用于此软件包，<br>则执行`rpm --<span class="hljs-keyword">import</span> https:<span class="hljs-comment">//repo.mysql.com/RPM-GPG-KEY-mysql-2022` ，然后重新安装</span><br></code></pre></td></tr></table></figure></li><li><p>启动MySQL</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">systemctl <span class="hljs-literal">start</span> mysqld.service<br></code></pre></td></tr></table></figure></li><li><p>检查是否启动成功</p><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs fortran">systemctl <span class="hljs-keyword">status</span> mysqld.service<br></code></pre></td></tr></table></figure></li></ol><h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><p>先进入mysql命令行界面</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">默认情况下，用`mysql`命令即可<br><br>如果报错：ERROR <span class="hljs-number">1045</span> (<span class="hljs-number">28000</span>): <span class="hljs-keyword">Access</span> denied <span class="hljs-keyword">for</span> <span class="hljs-keyword">user</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span>，<br>则修改 /etc/my.cnf文件，在最后加入skip-<span class="hljs-keyword">grant</span>-<span class="hljs-keyword">tables</span><br><br>然后重启数据库：systemctl <span class="hljs-keyword">restart</span> mysqld<br></code></pre></td></tr></table></figure><p>然后是创建数据库</p><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">database</span> chatgpt;<br></code></pre></td></tr></table></figure><p>指定刚创建的数据库（因为本地可以创建多个数据库，所以必须先指定当前用的是哪个数据库）</p><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">use chatgpt<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure><p>创建表</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> invoke_record<br>(<br>id <span class="hljs-type">INT</span>(<span class="hljs-number">11</span>) auto_increment,<br>ip <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">25</span>),<br>prompt <span class="hljs-type">TEXT</span>,<br>completion <span class="hljs-type">TEXT</span>,<br>invoke_time DATETIME <span class="hljs-keyword">default</span> <span class="hljs-built_in">current_timestamp</span>,<br><span class="hljs-keyword">primary key</span>(id)<br>);<br></code></pre></td></tr></table></figure><p>运行效果如下图</p><p><img src="/../../pic/MySql-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93.png" alt="avatar"></p><p>用<code>exit</code>退出mysql命令行。</p><p>注：命令后面要加<code>;</code>符号才开始执行。</p><p>补充些常用命令</p><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs n1ql">插入数据<br>    <span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> invoke_record(ip, prompt, completion) <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&quot;ip1&quot;</span>,<span class="hljs-string">&quot;prompt2&quot;</span>,<span class="hljs-string">&quot;completion3&quot;</span>);<br>查询数据<br>    <span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> invoke_record;<br></code></pre></td></tr></table></figure><h2 id="远程访问数据库"><a href="#远程访问数据库" class="headerlink" title="远程访问数据库"></a>远程访问数据库</h2><h3 id="MySql可视化软件"><a href="#MySql可视化软件" class="headerlink" title="MySql可视化软件"></a>MySql可视化软件</h3><p>在个人电脑上安装MySql可视化软件，Window可使用Navicat，Mac上使用MySQLWorkBench。<br>以MySQLWorkBench为例：<br><img src="/../../pic/MySql-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5.png" alt="img.png"><br>新建连接，填写连接的参数，包括连接名、IP、端口（默认3306）、用户名、密码。<br>填完后点击下面的测试连接是否成功。</p><p>如果测试失败，原因可能是默认账号不支持远程登陆，所以往下看，创建新的数据库用户。</p><h3 id="创建数据库用户"><a href="#创建数据库用户" class="headerlink" title="创建数据库用户"></a>创建数据库用户</h3><p>创建新用户，用于远程登陆，命令如下。</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;song&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;pwd123&#x27;</span>;<br><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;song&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">OPTION</span>;<br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;song&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;pwd123&#x27;</span>;<br><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;song&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">OPTION</span>;<br></code></pre></td></tr></table></figure><p>上面命令中的song是用户名，pwd123是密码，替换成自己的即可。</p><p>新增账号密码后，在命令行中进入数据库界面的命令就可以用这个</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">mysql -u song -<span class="hljs-selector-tag">p</span><br></code></pre></td></tr></table></figure><p>按回车后根据提示，输入密码<code>pwd123</code></p><p>能成功进入mysql命令行，说明新用户创建成功，回到前面的可视化软件，再次尝试应该就可以了。</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">如果数据库保存中文失败，<br>则修改 /etc/my.cnf文件，在最后加入<br><br>[client]<br><span class="hljs-keyword">default</span>-<span class="hljs-type">character</span>-<span class="hljs-keyword">set</span> = utf8mb4<br><br>[mysql]<br><span class="hljs-keyword">default</span>-<span class="hljs-type">character</span>-<span class="hljs-keyword">set</span> = utf8mb4<br><br>[mysqld]<br><span class="hljs-type">character</span>-<span class="hljs-keyword">set</span>-client-handshake = <span class="hljs-keyword">FALSE</span><br><span class="hljs-type">character</span>-<span class="hljs-keyword">set</span>-<span class="hljs-keyword">server</span> = utf8mb4<br><span class="hljs-keyword">collation</span>-<span class="hljs-keyword">server</span> = utf8mb4_bin  #utf8mb4_unicode_ci 会导致部分字符查询出错<br><br>然后重启数据库：systemctl <span class="hljs-keyword">restart</span> mysqld<br></code></pre></td></tr></table></figure><h2 id="项目实践"><a href="#项目实践" class="headerlink" title="项目实践"></a>项目实践</h2><ol><li><p>更新上篇文章的ChatGpt项目的代码，具体做法：进入项目所在的目录，运行<code>git pull</code>命令。</p></li><li><p>修改代码中generate.js文件中的数据库参数，如下图：</p></li></ol><p><img src="/../../pic/MySql-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE.png" alt="img"></p><ol start="3"><li><p>重新部署程序，当每次请求时，不出意外的话，请求的信息就会保存到数据库中。</p></li><li><p>查看数据库的内容，用命令行和用可视化软件都可以，查询语句为<code>select * from invoke_record</code>。</p></li></ol><p>至此已经可以在项目进行数据库的操作了。</p><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>自此，对MySql的基本使用已经介绍完成了。现在已经有个项目的基本样子了，后续的工作主要就是修改代码了，如修改网页界面，增加功能等。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>服务器搭建</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>搭建个人网址(3)——ChatGPT服务搭建</title>
+    <link href="/23491/"/>
+    <url>/23491/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本项目运行的最终结果就是在网页端输入问题，通过请求后端的接口，获取对应的回答并展示，如下图：<br><img src="/../../pic/ChatGPT%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA-%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE.png" alt="avatar"></p><p>选ChatGPT当作示例项目是因为刚好在玩这个项目，刚好拿来写这篇文章了，如果有其他项目也行，按照该项目的部署说明操作即可。</p><h2 id="前提准备"><a href="#前提准备" class="headerlink" title="前提准备"></a>前提准备</h2><ul><li><p>一台服务器</p><p>没有服务器的看前两篇文章：</p><ol><li><a href="/28862">搭建个人网址(1)——连接服务器</a></li><li><a href="/43379">搭建个人网址(2)——服务器环境搭建</a></li></ol></li><li><p>ChatGPT的api-key</p><p> 这个key获取比较麻烦，这里不多介绍，可单独网上搜教程</p></li></ul><hr><h1 id="1-安装git环境"><a href="#1-安装git环境" class="headerlink" title="1.安装git环境"></a>1.安装git环境</h1><p>安装命令</p><p><code>yum -y install git</code></p><p>验证是否安装成功</p><p><code>git --version</code></p><h1 id="2-拉取代码"><a href="#2-拉取代码" class="headerlink" title="2.拉取代码"></a>2.拉取代码</h1><p>github项目<br><a href="https://github.com/songlj233/openai-quickstart-node.git">https://github.com/songlj233/openai-quickstart-node.git</a></p><p>gitee项目<br><a href="https://gitee.com/songlj233/openai-quickstart-node.git">https://gitee.com/songlj233/openai-quickstart-node.git</a></p><p>这两个项目是一样的，github网络不大稳定的可以用gitee的。</p><p>应该知道怎么下代码吧<code>git clone xxx</code>，xxx就是上面的URL。</p><h1 id="3-升级node版本"><a href="#3-升级node版本" class="headerlink" title="3.升级node版本"></a>3.升级node版本</h1><p>部署项目时发现node版本太旧，拉取的项目需要node版本18以上的环境，所以需要先升级node。</p><p>安装n命令：</p><p><code>npm install -g n</code></p><p>进入n命令所在的文件夹，更新到最新版本：</p><p><code>./n latest</code></p><p>检查是否更新成功：</p><p><code>node -v</code></p><p>更新node版本的过程截图如下</p><p><img src="/../../pic/ChatGPT%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA-%E6%9B%B4%E6%96%B0node%E7%89%88%E6%9C%AC.png" alt="avatar"></p><h1 id="3-编译部署"><a href="#3-编译部署" class="headerlink" title="3.编译部署"></a>3.编译部署</h1><p>拉取代码后，参考git项目源码中的README.md操作即可。</p><p>根据README.md的操作完，项目就部署成功了，然后打开浏览器访问即可，就可以得到最前面展示的效果图了。</p><h1 id="4-部署小tip"><a href="#4-部署小tip" class="headerlink" title="4.部署小tip"></a>4.部署小tip</h1><ol><li>部署项目的命令是<code>npm run dev</code>，运行后会一直存在命令行界面，<br>用<code>nohup npm run dev&amp;</code>命令，则会在后台运行，并把运行的结果输出到当前路径下的”nohup.out”文件中。</li><li>上一步的部署命令较长，不容易记，可以新建文本，把部署的命令复制进行，<br>运行<code>chmod +x run</code>增加可执行权限，运行<code>./run</code>命令即可部署（其中run就是文件名）。</li><li>用了上面的nohup后，运行日志会输出到<code>nohup.out</code>文件中，可查看文件进行错误分析</li><li>项目重复部署，原3000端口被占用，会用3001端口顺延，浏览器地址记得修改</li></ol><hr><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>至此已经搭建完一个简单的ChatGPT的项目，有前端的界面和后端的接口，算是有一个项目的基本样子了。</p><p>但是还有个问题，还缺少用来保存数据的数据库服务，那下篇就应用下MySql数据库的使用。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>服务器搭建</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>搭建个人网址(2)——服务器环境搭建</title>
+    <link href="/43379/"/>
+    <url>/43379/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇文章的前提是拥有一台服务器，并能通过命令行远程连接，如果没有服务器的话，参考下面这篇文章：</p><ul><li><a href="/28862">搭建个人网址(1)——连接服务器</a></li></ul><hr><p>本篇主要讲解如何搭建Node.js的环境，并部署一个最基本的Node项目。 参考文章<a href="https://help.aliyun.com/document_detail/172788.html">https://help.aliyun.com/document_detail/172788.html</a></p><h2 id="一、搭建Node环境"><a href="#一、搭建Node环境" class="headerlink" title="一、搭建Node环境"></a>一、搭建Node环境</h2><p>命令如下</p><ol><li><p>下载Node.js安装包。（会下载文件到当前文件夹，默认<code>/root</code>）</p> <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">wget</span> https://nodejs.org/dist/v6.<span class="hljs-number">9</span>.<span class="hljs-number">5</span>/node-v6.<span class="hljs-number">9</span>.<span class="hljs-number">5</span>-linux-x64.tar.xz<br></code></pre></td></tr></table></figure></li><li><p>解压文件。</p> <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">tar xvf <span class="hljs-keyword">node</span><span class="hljs-title">-v6</span>.<span class="hljs-number">9.5</span>-linux-x64.tar.xz<br></code></pre></td></tr></table></figure></li><li><p>创建软链接，这样就可以在任意目录下直接使用node和npm命令。</p> <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">ln -s <span class="hljs-regexp">/root/</span>node-v6.<span class="hljs-number">9.5</span>-linux-x64<span class="hljs-regexp">/bin/</span>node <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/bin/</span>node<br>ln -s <span class="hljs-regexp">/root/</span>node-v6.<span class="hljs-number">9.5</span>-linux-x64<span class="hljs-regexp">/bin/</span>npm <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/bin/</span>npm<br></code></pre></td></tr></table></figure></li><li><p>查看node、npm版本。</p> <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-keyword">node</span> <span class="hljs-title">-v</span><br>npm -v<br></code></pre></td></tr></table></figure></li></ol><p>如果能成功查看到版本，则说明Node环境已经安装完毕。</p><h2 id="二、项目部署"><a href="#二、项目部署" class="headerlink" title="二、项目部署"></a>二、项目部署</h2><ol><li><p>新建并编辑文件example.js。（建议新建个文件夹来操作）</p> <figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs maxima">vi <span class="hljs-built_in">example</span>.js<br></code></pre></td></tr></table></figure></li><li><p>将以下项目文件内容粘贴到文件中。</p> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> http =<span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;http&#x27;</span>);<br><span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&#x27;0.0.0.0&#x27;</span>;<br><span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;<br><span class="hljs-keyword">const</span> server = http.<span class="hljs-title function_">createServer</span>(<span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>    res.<span class="hljs-property">statusCode</span> = <span class="hljs-number">200</span>;<br>    res.<span class="hljs-title function_">setHeader</span>(<span class="hljs-string">&#x27;Content-Type&#x27;</span>, <span class="hljs-string">&#x27;text/plain&#x27;</span>);<br>    res.<span class="hljs-title function_">end</span>(<span class="hljs-string">&#x27;Hello World\n&#x27;</span>);<br>&#125;);<br><br>server.<span class="hljs-title function_">listen</span>(port, hostname, <span class="hljs-function">() =&gt;</span> &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Server running at http://<span class="hljs-subst">$&#123;hostname&#125;</span>:<span class="hljs-subst">$&#123;port&#125;</span>/`</span>);<br>&#125;);<br></code></pre></td></tr></table></figure></li><li><p>运行项目。</p> <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-keyword">node</span> <span class="hljs-title">example</span>.js<br></code></pre></td></tr></table></figure></li></ol><p>没报错的话，基本说明项目已经正常运行了。</p><h2 id="三、添加安全组规则"><a href="#三、添加安全组规则" class="headerlink" title="三、添加安全组规则"></a>三、添加安全组规则</h2><p>解释</p><p>   <code>我们访问服务器的端口需要服务器配置，默认是只有80、443等常用端口，像3000端口是没有配置过的，所以需要我们自己手动添加配置。</code></p><p>具体步骤：</p><ol><li>网页登录阿里云的[ECS管理控制台]界面，找到安全组的配置入口。</li></ol><p><img src="/../../pic/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-%E6%B7%BB%E5%8A%A0%E5%AE%89%E5%85%A8%E7%BB%841.png" alt="avatar"></p><ol start="2"><li>在入方向中新增3000端口的入网规则即可（也可配置连续的端口，如3000&#x2F;3010表示3000-3010之间的端口）。</li></ol><p><img src="/../../pic/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-%E6%B7%BB%E5%8A%A0%E5%AE%89%E5%85%A8%E7%BB%842.png" alt="avatar"></p><h2 id="四、访问项目"><a href="#四、访问项目" class="headerlink" title="四、访问项目"></a>四、访问项目</h2><p>在本地机器的浏览器中输入**<code>http://IP:3000</code>**访问项目。（这里的IP就是服务器的IP）</p><p><img src="/../../pic/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA-%E8%AE%BF%E9%97%AE%E9%A1%B9%E7%9B%AE.png" alt="avatar"></p><p>至此，node搭建的已经可以正常访问了。</p><hr><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>至此已经搭建完一个Node项目，并访问了。但是当前的node项目是一个静态网页，并没有什么功能，下一篇用具体的应用来体现服务器的作用。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>服务器搭建</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>搭建个人网址(1)——连接服务器</title>
+    <link href="/28862/"/>
+    <url>/28862/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本系列文章主要是记录从0开始，一步步搭建个人网址的过程。主要分为3步：</p><ul><li>购买服务器</li><li>服务器搭建</li><li>项目实战</li></ul><hr><p>下面是第一步（购买服务器）的讲解。</p><h2 id="一、服务器购买"><a href="#一、服务器购买" class="headerlink" title="一、服务器购买"></a>一、服务器购买</h2><p>如果已经有服务器的可跳过。</p><p>进入阿里云服务器官网，点击“产品-云服务器ECS”，选择要购买的配置、时长等，支付即可。<br>以下配置仅供参考：</p><ul><li><p>基础配置</p><p>选择自定义配置，选择最低配一个月（主要是便宜）。</p><p><img src="/../../pic/%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A81.png" alt="avatar"></p></li><li><p>网络和安全组配置</p><p>带宽计费模式选用按流量付费（主要是便宜），其他配置不用修改</p></li></ul><p><img src="/../../pic/%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A82.png" alt="avatar"></p><ul><li>确认界面<br>确认没问题后下单付款即可</li></ul><p><img src="/../../pic/%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A83.png" alt="avatar"></p><ul><li>省钱小tip<ol><li>地域选华北6（乌兰察布）会便宜点</li><li>实例的分类在共享型中选突发性能型，便宜点</li><li>系统盘选高效云盘，20G，便宜点</li><li>网络的带宽计费模式用按使用流量，简单测试流量一般较少，更便宜</li><li>购买时长一周够用点话就选一周，便宜点</li></ol></li></ul><p>以上小tip，不差钱的可忽略</p><h2 id="二、重置密码"><a href="#二、重置密码" class="headerlink" title="二、重置密码"></a>二、重置密码</h2><p>购买成功后，就可以进入到这个界面，这里说的实例，就是我们所说的服务器<br><img src="/../../pic/%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%8C%E6%AF%95.png" alt="avatar"></p><p>第一次远程连接会提示重置服务器密码，这个密码就是后续远程登陆服务器会用到的，记得保存。</p><p>重置密码后服务器需要重启，等待服务器重启完毕即可。<br><img src="/../../pic/%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1%E5%99%A8.png" alt="avatar"></p><h2 id="三、远程连接"><a href="#三、远程连接" class="headerlink" title="三、远程连接"></a>三、远程连接</h2><p>打开电脑的命令行界面（系统自带、第三方的都行），后续的操作主要都在命令行上。 </p><p>登陆服务器命令如下：</p><p><code>ssh 用户名@ip</code></p><p>用户名默认一般都是root，ip可以在网页端的服务器首页查看：</p><p><img src="/../../pic/%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E5%99%A8ip.png" alt="avatar"></p><p>登陆过程如下，红框部分是需要输入的，最后一个空白的红框就是前面重置的密码。</p><p><img src="/../../pic/%E7%99%BB%E9%99%86%E6%9C%8D%E5%8A%A1%E5%99%A8.png" alt="avatar"></p><p>至此连接服务器，就已经完成了。</p><hr><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本篇主要介绍了如果购买并连接上服务器。但是目前这服务器还没有任何功能，下篇文章将介绍如果部署一个可以访问的项目。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>服务器搭建</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
