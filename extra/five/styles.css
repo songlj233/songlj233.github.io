@@ -1,0 +1,39 @@
+canvas{
+	display:block;
+	margin:30px auto;
+	box-shadow:-2px -2px 2px #eee,5px 5px 5px #bbb;
+}
+body{
+	font-size: 28px;
+	color:#333;
+}
+.title{
+	text-align:center;
+	font-size: 45px;
+}
+#restart{
+	text-align:center;
+	margin:20px;
+}
+#huiqi{
+	text-align:center;
+	margin:20px;
+}
+#pointSign{
+	width:8px;
+	height:8px;
+	background-color:red;
+	position:absolute;
+	display:none;
+}
+
+.remainTime{
+	text-align:center;
+	color:#999;
+}
+
+.descript{
+	text-align:left;
+	margin-left:30px;
+	color:#999;
+}
