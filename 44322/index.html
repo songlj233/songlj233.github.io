@@ -23,15 +23,15 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="前言本篇文章介绍的是如何在一个项目中，将项目的数据存储到服务器中。 前提准备 一台服务器，且能正常部署项目  安装MySql 下载MySQL的安装包 1wget http:&#x2F;&#x2F;repo.mysql.com&#x2F;mysql57-community-release-el7-10.noarch.rpm  安装MySQL源 1rpm -Uvh mysql57-community-release-el7-10.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/pic/MySql-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93.png">
-<meta property="og:image" content="http://example.com/pic/MySql-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5.png">
-<meta property="og:image" content="http://example.com/pic/MySql-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE.png">
+<meta property="og:image" content="http://example.com/pic/%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/MySql-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93.png">
+<meta property="og:image" content="http://example.com/pic/%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/MySql-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5.png">
+<meta property="og:image" content="http://example.com/pic/%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/MySql-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE.png">
 <meta property="article:published_time" content="2023-01-01T02:00:04.000Z">
-<meta property="article:modified_time" content="2023-03-26T10:46:47.594Z">
+<meta property="article:modified_time" content="2023-03-28T06:21:04.516Z">
 <meta property="article:author" content="songlj">
 <meta property="article:tag" content="服务器搭建">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/pic/MySql-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93.png">
+<meta name="twitter:image" content="http://example.com/pic/%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/MySql-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93.png">
   
   
   
@@ -311,13 +311,13 @@
 <p>创建表</p>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> invoke_record<br>(<br>id <span class="hljs-type">INT</span>(<span class="hljs-number">11</span>) auto_increment,<br>ip <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">25</span>),<br>prompt <span class="hljs-type">TEXT</span>,<br>completion <span class="hljs-type">TEXT</span>,<br>invoke_time DATETIME <span class="hljs-keyword">default</span> <span class="hljs-built_in">current_timestamp</span>,<br><span class="hljs-keyword">primary key</span>(id)<br>);<br></code></pre></td></tr></table></figure>
 <p>运行效果如下图</p>
-<p><img src="/../../pic/MySql-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93.png" srcset="/img/loading.gif" lazyload alt="avatar"></p>
+<p><img src="/../../pic/%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/MySql-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93.png" srcset="/img/loading.gif" lazyload alt="avatar"></p>
 <p>用<code>exit</code>退出mysql命令行。</p>
 <p>注：命令后面要加<code>;</code>符号才开始执行。</p>
 <p>补充些常用命令</p>
 <figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs n1ql">插入数据<br>    <span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> invoke_record(ip, prompt, completion) <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&quot;ip1&quot;</span>,<span class="hljs-string">&quot;prompt2&quot;</span>,<span class="hljs-string">&quot;completion3&quot;</span>);<br>查询数据<br>    <span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> invoke_record;<br></code></pre></td></tr></table></figure>
 
-<h2 id="远程访问数据库"><a href="#远程访问数据库" class="headerlink" title="远程访问数据库"></a>远程访问数据库</h2><h3 id="MySql可视化软件"><a href="#MySql可视化软件" class="headerlink" title="MySql可视化软件"></a>MySql可视化软件</h3><p>在个人电脑上安装MySql可视化软件，Window可使用Navicat，Mac上使用MySQLWorkBench。<br>以MySQLWorkBench为例：<br><img src="/../../pic/MySql-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5.png" srcset="/img/loading.gif" lazyload alt="img.png"><br>新建连接，填写连接的参数，包括连接名、IP、端口（默认3306）、用户名、密码。<br>填完后点击下面的测试连接是否成功。</p>
+<h2 id="远程访问数据库"><a href="#远程访问数据库" class="headerlink" title="远程访问数据库"></a>远程访问数据库</h2><h3 id="MySql可视化软件"><a href="#MySql可视化软件" class="headerlink" title="MySql可视化软件"></a>MySql可视化软件</h3><p>在个人电脑上安装MySql可视化软件，Window可使用Navicat，Mac上使用MySQLWorkBench。<br>以MySQLWorkBench为例：<br><img src="/../../pic/%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/MySql-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5.png" srcset="/img/loading.gif" lazyload alt="img.png"><br>新建连接，填写连接的参数，包括连接名、IP、端口（默认3306）、用户名、密码。<br>填完后点击下面的测试连接是否成功。</p>
 <p>如果测试失败，原因可能是默认账号不支持远程登陆，所以往下看，创建新的数据库用户。</p>
 <h3 id="创建数据库用户"><a href="#创建数据库用户" class="headerlink" title="创建数据库用户"></a>创建数据库用户</h3><p>创建新用户，用于远程登陆，命令如下。</p>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;song&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;pwd123&#x27;</span>;<br><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;song&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">OPTION</span>;<br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;song&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;pwd123&#x27;</span>;<br><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;song&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">OPTION</span>;<br></code></pre></td></tr></table></figure>
@@ -334,7 +334,7 @@
 <li><p>修改代码中generate.js文件中的数据库参数，如下图：</p>
 </li>
 </ol>
-<p><img src="/../../pic/MySql-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/../../pic/%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/MySql-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 <ol start="3">
 <li><p>重新部署程序，当每次请求时，不出意外的话，请求的信息就会保存到数据库中。</p>
 </li>
@@ -361,7 +361,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="category-chain-item">服务器</a>
   
   
 
@@ -433,9 +433,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/56357/" title="搭建个人网站">
+                      <a href="/56357/" title="搭建个人网站-总述">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">搭建个人网站</span>
+                        <span class="hidden-mobile">搭建个人网站-总述</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
