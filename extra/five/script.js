@@ -145,7 +145,6 @@ function makeSign(i,j){
     pointSign.style.position = "absolute";
     pointSign.style.left = ((parentWidth - 450) / 2 + i * 30 + 25) + "px";
     pointSign.style.top = (41 + j * 30) + "px";
-
 }
 
 
