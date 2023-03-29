@@ -132,10 +132,20 @@ function oneStep(i,j){
 //改变红点标记位置
 function makeSign(i,j){
 	var pointSign = document.getElementById("pointSign");
-	var allWidth = document.body.offsetWidth;
-	pointSign.style.marginLeft=(allWidth-450)/2+i*30+11+"px";
-	pointSign.style.marginTop=41+j*30+"px";
-	pointSign.style.display="block";
+	pointSign.style.display = "block";
+
+	//这是普通网页的标记方法
+//	var allWidth = document.body.offsetWidth;
+//	pointSign.style.marginLeft=(allWidth-450)/2+i*30+11+"px";
+//	pointSign.style.marginTop=41+j*30+"px";
+
+    //这是适配hexo的fluid主题布局的标记方法，用chatgpt得到的解决方案
+    var parentElem = pointSign.parentElement; // 获取 pointSign 的父元素
+    var parentWidth = parentElem.offsetWidth;
+    pointSign.style.position = "absolute";
+    pointSign.style.left = ((parentWidth - 450) / 2 + i * 30 + 25) + "px";
+    pointSign.style.top = (41 + j * 30) + "px";
+
 }
 
 
